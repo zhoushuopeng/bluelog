@@ -35,6 +35,8 @@ def send_new_comment_email(post):
                    % (post.title, post_url, post_url))
 
 
+
+
 def send_new_reply_email(comment):
     post_url = url_for('blog.show_post', post_id=comment.post_id, _external=True) + '#comments'
     send_mail(subject='New reply', to=comment.email,
